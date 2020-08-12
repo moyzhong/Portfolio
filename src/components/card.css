@@ -64,7 +64,7 @@ html {
 Allows to adapt to screen sizes via CSS Grid
 */
 .CardGroup {
-    margin: 5rem 0;
+    margin: 5rem 4rem 10rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 4rem;

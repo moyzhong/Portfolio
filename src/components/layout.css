@@ -29,10 +29,12 @@ a {
 APPLYING HERO BACKGROUND CSS 
 */
 .Hero {
-  height: 920px;
+  height: 100%;
   background: url('../images/wallpaper3.jpg');
   background-size: cover;
   background-position: center;
+
+  position: relative;
 }
 
 /*
@@ -51,12 +53,23 @@ Once there's a CSS reference name, you can target anything inside it
   color: white;
   font-size: 6rem; /* OG: 60px */
   line-height: 1.2;
+
+  /* Calling the animation; call the name and duration at a minimum */
+  animation: HeroAnimation;
+  animation-duration: 3s;
+  animation-delay: 0.1;
+  animation-fill-mode: forwards; /* Makes sure that the animation doesn't reset */
+  animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+  opacity: 0;
 }
 
 .Hero p {
   font-size: 3rem; /* OG: 30px */
   line-height: 1.5;
   color: rgba(255,255,0.8);
+
+  animation: HeroAnimation 3s 0.2s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
+  opacity: 0;
 }
 
 .Hero a {
@@ -67,19 +80,59 @@ Once there's a CSS reference name, you can target anything inside it
   padding: .9rem 2rem;
   border: 1px solid rgba(255,255,255,0.25);
   border-radius: 20px;
+
+  transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-/* Stylizing */
+.Hero a:hover {
+  background: white;
+  color: black;
+}
+
+.Hero svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.Hero .Logos {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* fr is a fraction unit to divide the grid into equal columns */
+  grid-gap: 4rem;
+  margin: 10rem 0;
+  justify-items: center;
+}
+
+/* STYLIZING FOR SMALLER DEVICES*/
 @media (max-width: 640px) {
   .HeroGroup {
     padding: 10em 2em;
   }
 
   .Hero h1 {
-    font-size: 6em;
+    font-size: 4em;
   }
 
   .Hero p {
     font-size: 2.4em;
+  }
+
+  .Hero .Logos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 
+ANIMATION KEYFRAMES
+You can control properties b/w 0% and 100%
+*/
+@keyframes HeroAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
   }
 }

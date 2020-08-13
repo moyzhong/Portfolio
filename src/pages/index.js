@@ -43,8 +43,8 @@ const IndexPage = () => (
      </div>
    </div>
 
-   <div className = "Cards">
-      <h2>11 courses, more coming</h2>
+   <h2>11 courses, more coming</h2>
+   <div className = "CardGroup">
       <Card 
         title = "DesignSystem"
         text = "10 sections"

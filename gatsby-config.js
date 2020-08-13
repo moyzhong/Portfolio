@@ -3,6 +3,7 @@ module.exports = {
     title: `Moy's Page`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
+    keywords: 'react course, react for designers, ios development, sketch app, swift app course, arkit 2, after effects, create sketch plugin',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

@@ -49,7 +49,7 @@ class Header extends React.Component {
     return (
       <div className = {this.state.hasScrolled ? 'Header HeaderScrolled' : 'Header'}>
         <div className = "HeaderGroup">
-          <Link to = "/"><img src = {require('../images/logo-designcode.svg')}/></Link>
+          <Link to = "/"><img alt = "Design Code's logo, a D made of multiple blue triangles of different hues" src = {require('../images/logo-designcode.svg')}/></Link>
           <Link to = "/courses">Courses</Link>
           <Link to = "/downloads">Downloads</Link>
           <Link to = "/workshops">Workshops</Link>

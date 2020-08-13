@@ -46,12 +46,12 @@ const IndexPage = () => (
       <Link to="/page-2">Watch the video</Link>
       
       <div className= "Logos" >
-        <img src={require('../images/logo-sketch.png')} width="50" />
-        <img src={require('../images/logo-figma.png')} width="50" />
-        <img src={require('../images/logo-studio.png')} width="50" />
-        <img src={require('../images/logo-framer.png')} width="50" />
-        <img src={require('../images/logo-react.png')} width="50" />
-        <img src={require('../images/logo-swift.png')} width="50" />
+        <img alt="Sketch's logo, an orange gem" src={require('../images/logo-sketch.png')} width="50" />
+        <img alt="Figma's logo, a multicolored 'F'" src={require('../images/logo-figma.png')} width="50" />
+        <img alt="Studio's logo, a salmon box with a white 'S'" src={require('../images/logo-studio.png')} width="50" />
+        <img alt="Framer's logo, a blue 'F' in a white box overlaying a blue box" src={require('../images/logo-framer.png')} width="50" />
+        <img alt="React's logo, a blue atom" src={require('../images/logo-react.png')} width="50" />
+        <img alt="Swift's logo, an orange swallow" src={require('../images/logo-swift.png')} width="50" />
       </div>
       <Wave />
      </div>

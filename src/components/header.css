@@ -65,7 +65,7 @@ Media queries makes the layout adaptive based on screen width
     }
 
     .HeaderGroup {
-        grid-template-columns: repeat (4, auto);
+        grid-template-columns: repeat(4, auto);
     }
 
     .Header a:nth-child(4) {

@@ -15,7 +15,7 @@ const Header = ({ siteTitle }) => (
       <Link to = "/buy"><button>Buy</button></Link>
     </div>
   </div>
-)
+
 */
 
 /*

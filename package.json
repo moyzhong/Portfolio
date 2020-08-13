@@ -21,11 +21,15 @@
   "devDependencies": {
     "prettier": "2.0.5"
   },
+  "resolutions": {
+    "dot-prop": ">=5.2.0"
+  },
   "keywords": [
     "gatsby"
   ],
   "license": "0BSD",
   "scripts": {
+    "preinstall": "npx npm-force-resolutions",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",

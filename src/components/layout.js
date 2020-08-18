@@ -10,31 +10,40 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
+import Footer from "./footer"
 import "./layout.css"
 
-const Layout = ({ children }) => {
+const Layout = ({ children }) => { 
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
         siteMetadata {
           title
           description
-          author
           keywords
         }
       }
-    }
+      allContentfulLink(sort: { fields: [createdAt], order: ASC }) {
+        edges {
+          node {
+            title
+            url {
+              id
+            }
+            createdAt
+          }
+        }
+      }
+    } 
   `)
 
   return (
     <div>
         <Header />
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+        <Footer links = {data.allContentfulLink.edges}>
+          Backgrounds made in Cinema 4D, iOS app in Swift, site in React. <a href="mailto:support@designcode.io">Email us</a> to ask anything. (C) 2018
+        </Footer>
     </div>
   )
 }
@@ -44,3 +53,11 @@ Layout.propTypes = {
 }
 
 export default Layout
+
+ /*
+ <footer>
+    © {new Date().getFullYear()}, Built with
+    {` `}
+    <a href="https://www.gatsbyjs.org">Gatsby</a>
+</footer> 
+*/

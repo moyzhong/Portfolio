@@ -57,13 +57,13 @@ const SectionText = styled.p`
 const WaveBottom = styled.div`
     position: absolute;
     width: 100%;
-    bottom: -0.6rem;
+    bottom: -0.8rem;
 `
 
 const WaveTop = styled.div`
     position: absolute;
     width: 100%;
-    top: -0.6rem;
+    top: -0.8rem;
     transform: rotate(180deg);
 `
 

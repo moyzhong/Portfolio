@@ -8,10 +8,10 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: `gatsby-source-contentful`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        spaceId: `bw9axinuybn5`,
+        accessToken: `h29kE87Ky15I7tP4a3IElOhuagD7L-1Z-ZbD7U32CgM`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -31,5 +31,5 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
-  ],
+  ], 
 }

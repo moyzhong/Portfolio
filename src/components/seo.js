@@ -38,7 +38,7 @@ function SEO({ description, lang, meta, title }) {
       meta={[
         {
           name: `description`,
-          content: site.siteMetadata.description
+          content: site.siteMetadata.description,
         },
         {
           property: `og:title`,

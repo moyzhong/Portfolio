@@ -1,7 +1,7 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import './Header.css' /*IMPORTING FROM CSS*/
+import './header.css' /*IMPORTING FROM CSS*/
 
 /*
 STATELESS HEADER

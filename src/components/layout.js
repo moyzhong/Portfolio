@@ -41,7 +41,7 @@ export const Layout = ({ children }) => {
     <div>
         <Header />
         <main>{children}</main>
-        <Footer links = {data.allContentfulLink.edges}>
+        <Footer data = {data}>
           Backgrounds made in Cinema 4D, iOS app in Swift, site in React. <a href="mailto:support@designcode.io">Email us</a> to ask anything. (C) 2018
         </Footer>
     </div>

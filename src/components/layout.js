@@ -20,6 +20,7 @@ export const Layout = ({ children }) => {
         siteMetadata {
           title
           description
+          author
           keywords
         }
       }
